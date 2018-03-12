@@ -1,4 +1,5 @@
 import React from "react"
 import { render } from "react-dom"
+import MarkdownNote from "./components/MarkdownNote"
 
-render(<div>Hello, Electron!!! and React JSX</div>, document.getElementById("app"))
+render(<MarkdownNote />, document.getElementById("app"))

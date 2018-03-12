@@ -1,3 +1,3 @@
-MarkDownNote
+MarkdownNote
 
-Simple MarkDown Note
+Simple Markdown Note

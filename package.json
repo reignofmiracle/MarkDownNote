@@ -8,7 +8,7 @@
     "watch": "webpack --watch",
     "start": "electron ."
   },
-  "repository": "https://github.com/reignofmiracle/MarkDownNote",
+  "repository": "https://github.com/reignofmiracle/MarkdownNote",
   "keywords": [
     "Electron",
     "MarkDown"
@@ -16,6 +16,7 @@
   "author": "reignofmiracle@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "marked": "^0.3.17",
     "npm": "^5.7.1",
     "photon": "github:connors/photon",
     "react": "^16.2.0",
