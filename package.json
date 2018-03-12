@@ -1,0 +1,35 @@
+{
+  "name": "markdownnote",
+  "version": "1.0.0",
+  "description": "simple markdown note",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/reignofmiracle/MarkDownNote",
+  "keywords": [
+    "Electron",
+    "MarkDown"
+  ],
+  "author": "reignofmiracle@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "npm": "^5.7.1",
+    "photon": "github:connors/photon",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "electron": "^1.8.3",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  }
+}
