@@ -1,15 +1,20 @@
 {
   "name": "markdownnote",
+  "productName": "MarkdownNote",
   "version": "1.0.0",
   "description": "simple markdown note",
   "main": "dist/main/index.js",
   "scripts": {
-    "build": "webpack",
+    "test": "eslint src/**/*.js src/**/*.jsx",
+    "compile": "webpack",
     "watch": "webpack --watch",
     "start": "electron .",
-    "build:osx": "build --mac",  
+    "copy:release_resources": "cpx \"release_resources/**/*\" dist",
+    "copy:photon": "cpx \"node_modules/photon/dist/css/**/*\" dist/css && cpx \"node_modules/photon/dist/fonts/**/*\" dist/fonts",
+    "bundle": "npm run copy:release_resources && npm run copy:photon",
+    "build:osx": "build --mac",
     "build:linux32": "build --linux --ia32",
-    "build:linux64": "build --linux --x64",  
+    "build:linux64": "build --linux --x64",
     "build:win32": "build --win --ia32",
     "build:win64": "build --win --x64"
   },
@@ -34,11 +39,11 @@
       "target": [
         "default"
       ],
-      "icon": "./resources/MarkdownNote.icns"
+      "icon": "./icon/MarkdownNote.icns"
     },
     "dmg": {
       "title": "MarkdownNote",
-      "icon": "./resources/MarkdownNote.icns"
+      "icon": "./icon/MarkdownNote.icns"
     },
     "win": {
       "target": [
@@ -46,7 +51,7 @@
         "nsis",
         "portable"
       ],
-      "icon": "./resources/MarkdownNote.ico"
+      "icon": "./icon/MarkdownNote.ico"
     },
     "linux": {
       "target": [
@@ -56,16 +61,16 @@
         "zip",
         "tar.gz"
       ],
-      "icon": "./resources"
+      "icon": "./icon"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
     },
     "directories": {
-      "buildResources": "resources/",
-      "output": "output/",
-      "app": "./"
+      "buildResources": "icon/",
+      "output": "release/",
+      "app": "dist/"
     }
   },
   "dependencies": {
@@ -80,9 +85,12 @@
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "cpx": "^1.5.0",
     "css-loader": "^0.28.10",
     "electron": "^1.8.3",
     "electron-builder": "^20.4.1",
+    "eslint": "^4.18.2",
+    "eslint-plugin-react": "^7.7.0",
     "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11"
