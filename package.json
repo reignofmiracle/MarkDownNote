@@ -6,7 +6,12 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "electron ."
+    "start": "electron .",
+    "build:osx": "build --mac",  
+    "build:linux32": "build --linux --ia32",
+    "build:linux64": "build --linux --x64",  
+    "build:win32": "build --win --ia32",
+    "build:win64": "build --win --x64"
   },
   "repository": "https://github.com/reignofmiracle/MarkdownNote",
   "keywords": [
@@ -15,6 +20,54 @@
   ],
   "author": "reignofmiracle@gmail.com",
   "license": "MIT",
+  "build": {
+    "productName": "MarkdownNote",
+    "appId": "com.beycat.MarkdownNote",
+    "asar": true,
+    "protocols": {
+      "name": "MarkdownNote",
+      "schemes": [
+        "MarkdownNote"
+      ]
+    },
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./resources/MarkdownNote.icns"
+    },
+    "dmg": {
+      "title": "MarkdownNote",
+      "icon": "./resources/MarkdownNote.icns"
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis",
+        "portable"
+      ],
+      "icon": "./resources/MarkdownNote.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "zip",
+        "tar.gz"
+      ],
+      "icon": "./resources"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "resources/",
+      "output": "output/",
+      "app": "./"
+    }
+  },
   "dependencies": {
     "marked": "^0.3.17",
     "npm": "^5.7.1",
@@ -29,6 +82,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.10",
     "electron": "^1.8.3",
+    "electron-builder": "^20.4.1",
     "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11"
