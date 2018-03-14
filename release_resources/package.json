@@ -1,8 +1,0 @@
-{
-    "name": "markdownnote",
-    "productName": "MarkdownNote",
-    "version": "1.0.0",
-    "main": "main/index.js",
-    "description": "simple markdown note",
-    "author": "reignofmiracle@gmail.com"
-}

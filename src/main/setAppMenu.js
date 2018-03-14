@@ -10,15 +10,6 @@ function setAppMenu(options) {
                 { label: "Save As", click: () => options.saveAsNewFile() },
                 { label: "Close", click: () => options.closeFile() }
             ]
-        },
-        {
-            label: "DevTools",
-            submenu: [
-                {
-                    label: "Toggle DevTools",
-                    click: () => BrowserWindow.getFocusedWindow().toggleDevTools()
-                }
-            ]
         }
     ]
 
