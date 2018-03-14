@@ -78,7 +78,8 @@
     "npm": "^5.7.1",
     "photon": "github:connors/photon",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "restore": "^0.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

@@ -1,9 +1,9 @@
-import { app } from "electron"
+import { app, console } from "electron"
 import createMainWindow from "./createMainWindow"
 import setAppMenu from "./setAppMenu"
 import createFileManager from "./createFileManager"
 import showSaveAsNewFileDialog from "./showSaveAsNewFileDialog"
-import showOpenFileDialog from "./showOpenFileDialog";
+import showOpenFileDialog from "./showOpenFileDialog"
 
 let mainWindow = null
 let fileManager = null
@@ -24,7 +24,7 @@ function saveFile() {
     mainWindow.requestText()
         .then((text) => fileManager.overwriteFile(text))
         .catch((error) => {
-            console.log(error);
+            console.log(error)
         })
 }
 

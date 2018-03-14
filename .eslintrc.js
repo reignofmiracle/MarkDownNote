@@ -22,15 +22,15 @@ module.exports = {
         ],
         "linebreak-style": [
             "error",
-            "unix"
+            "windows"
         ],
         "quotes": [
             "error",
-            "single"
+            "double"
         ],
         "semi": [
             "error",
-            "always"
+            "never"
         ]
     }
 };

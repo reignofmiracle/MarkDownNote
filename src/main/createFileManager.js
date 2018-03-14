@@ -29,7 +29,7 @@ class FileManager {
     }
 
     closeFile() {
-        return new Promise((resolve) => {
+        return new Promise(() => {
             this.filePath = ""            
         })
     }
