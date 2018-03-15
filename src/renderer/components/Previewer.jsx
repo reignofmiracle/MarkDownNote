@@ -7,7 +7,10 @@ marked.setOptions({ sanitize: true})
 export default function Previewer(props) {
     return (
         <div id="previewer" className={`${props.className} ${style.previewer}`} >
-            <span dangerouslySetInnerHTML={{ __html: marked(props.value) }} />
+            <div 
+                dangerouslySetInnerHTML={{ __html: marked(props.value) }} 
+                contenteditable="true"                
+                />
         </div>
     )
 }
