@@ -1,6 +1,5 @@
 import React from "react"
 import marked from "marked"
-import ContentEditable from 'react-contenteditable'
 import style from "./Previewer.css"
 
 marked.setOptions({ sanitize: true})
