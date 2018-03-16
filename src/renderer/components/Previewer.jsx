@@ -8,7 +8,7 @@ marked.setOptions({ sanitize: true})
 export default function Previewer(props) {
     return (
         <div id="previewer" className={`${props.className} ${style.previewer}`} >
-            <ContentEditable html={marked(props.value)} disabled={true} />
+            <span dangerouslySetInnerHTML={{ __html: marked(props.value) }} />
         </div>
     )
 }
